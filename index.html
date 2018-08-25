@@ -27,12 +27,14 @@
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
             crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" integrity="sha256-uqQQGnDcmRKvhKwc5Vm4XT1GQ2oV6t1U0NR2N9tV+BQ=" crossorigin="anonymous" />
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
             crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" integrity="sha256-6Y7CJDaltoeNgk+ZftgCD9jLgmGv4xKUo8nQ0HgAwVo=" crossorigin="anonymous"></script>
         <!-- Custom styles for this template -->
         <style>
             /* Sticky footer styles
@@ -106,11 +108,9 @@
 
 <body>
     <main role="main" class="container">
+    <div id="aplayer"></div>
     <div id="code" class="article">
         <H1>再见,老八位戏院</H1>
-        <audio controls autoplay>
-          <source src="https://www.sample-videos.com/audio/mp3/crowd-cheering.mp3" type="audio/mpeg">
-        </audio>
         <p></p>
         <p>你好。</p>
         <p>当你看到这行字的时候，老八位戏院已经如期倒闭了。</p>
@@ -188,6 +188,15 @@
 
 <script type="text/javascript">
     document.getElementById("code").typewriter();
+    const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    audio: [{
+        name: '马叫',
+        artist: 'artist',
+        url: 'https://www.sample-videos.com/audio/mp3/crowd-cheering.mp3',
+        cover: 'cover.jpg'
+    }]
+});
 </script>
 
 </html>
