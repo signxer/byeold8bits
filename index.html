@@ -110,6 +110,7 @@
     <main role="main" class="container">
     <div id="code" class="article">
         <H1>再见,老八位戏院</H1>
+        <div id="aplayer"></div>
         <p></p>
         <p>你好。</p>
         <p>当你看到这行字的时候，老八位戏院已经如期倒闭了。</p>
@@ -164,7 +165,6 @@
                 aria-controls="collapseExample">点我留言</button>
         </center>
         </div>
-    <div id="aplayer"></div>
     <div class="collapse" id="collapseExample">
         <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDUxOS83MDcz">
             <script type="text/javascript">
@@ -191,8 +191,6 @@
     const ap = new APlayer({
     container: document.getElementById('aplayer'),
     autoplay: true,
-    fixed: true,
-    volume: 0,
     audio: [{
         name: 'Merry Christmas Mr.Lawrence',
         artist: '坂本龍一',
