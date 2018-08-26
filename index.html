@@ -109,8 +109,10 @@
                     } else {
                         b++
                     }
-                    d.innerHTML = c.substring(0, b) + "|";
-                    if (b >= c.length) {
+                    if (b < c.length) {
+                        d.innerHTML = c.substring(0, b) + "|";
+                    }
+                    else {
                         clearInterval(e)
                     }
                 }, 75)
