@@ -136,6 +136,14 @@
                 }, 75)
                 return this
             }
+            function changelable() {
+                if (document.getElementById("autoscroll").checked) {
+                    document.getElementById("scrolllable").innerHTML = "Free"; 
+                }
+                else{
+                    document.getElementById("scrolllable").innerHTML = "Auto";
+                }
+            }
         </script>
     </head>
 
@@ -222,7 +230,7 @@
             </div>
             <div class="col" style="text-align:right;">
             <input type="checkbox" id="autoscroll" checked/>
-            <label for="autoscroll">自动滚动</label>
+            <label for="autoscroll" id="scrolllable" onclick="changelable()">Auto</label>
             </div>
         </div>
     </div>
