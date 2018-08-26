@@ -111,15 +111,14 @@
                     }
                     if (b < c.length - 1) {
                         d.innerHTML = c.substring(0, b) + "|";
-                        document.getElementById("end").scrollIntoView();
                     }
                     else if (b < c.length) {
                         d.innerHTML = c.substring(0, b);
-                        document.getElementById("end").scrollIntoView();
                     }
                     else {
                         clearInterval(e)
                     }
+                    document.getElementById("end").scrollIntoView();
                 }, 75)
                 return this
             }
