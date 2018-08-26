@@ -111,9 +111,11 @@
                     }
                     if (b < c.length - 1) {
                         d.innerHTML = c.substring(0, b) + "|";
+                        Element.scrollTop = Element.scrollHeight;
                     }
                     else if (b < c.length) {
                         d.innerHTML = c.substring(0, b);
+                        Element.scrollTop = Element.scrollHeight;
                     }
                     else {
                         clearInterval(e)
