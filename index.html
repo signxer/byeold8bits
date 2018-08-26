@@ -132,23 +132,23 @@
             }
             function changelable() {
                 if (document.getElementById("autoscroll").checked) {
-                    document.getElementById("scrolllable").innerHTML = "Free"; 
+                    document.getElementById("scrolllable").innerHTML = "FREE"; 
                 }
                 else{
-                    document.getElementById("scrolllable").innerHTML = "Auto";
+                    document.getElementById("scrolllable").innerHTML = "AUTO";
                 }
             }
             window.onscroll = function (ev) {
                  if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
                     if (document.getElementById("autoscroll").checked) {
                         document.getElementById("autoscroll").checked = false;
-                        document.getElementById("scrolllable").innerHTML = "Free";
+                        document.getElementById("scrolllable").innerHTML = "FREE";
                     }
                 }
                 else {
                      if (document.getElementById("autoscroll").checked == false) {
                         document.getElementById("autoscroll").checked = true;
-                        document.getElementById("scrolllable").innerHTML = "Auto";
+                        document.getElementById("scrolllable").innerHTML = "AUTO";
                     }
                 }
             }
@@ -240,7 +240,7 @@
             </div>
             <div class="col" style="text-align:right;">
             <input type="checkbox" id="autoscroll" checked/>
-            <label for="autoscroll" id="scrolllable" onclick="changelable()">Auto</label>
+            <label for="autoscroll" id="scrolllable" onclick="changelable()">AUTO</label>
             </div>
         </div>
     </div>
