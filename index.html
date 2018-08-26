@@ -103,6 +103,7 @@
             }
         </style>
         <script>
+            var manual = false;
             Element.prototype.typewriter = function (a) {
                 var d = this,
                     c = d.innerHTML,
@@ -131,6 +132,7 @@
                 return this
             }
             function changelable() {
+                manual = true;
                 if (document.getElementById("autoscroll").checked) {
                     document.getElementById("scrolllable").innerHTML = "FREE"; 
                 }
@@ -140,13 +142,13 @@
             }
             window.onscroll = function (ev) {
                  if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
-                    if (document.getElementById("autoscroll").checked) {
+                    if (document.getElementById("autoscroll").checked && manual == false) {
                         document.getElementById("autoscroll").checked = false;
                         document.getElementById("scrolllable").innerHTML = "FREE";
                     }
                 }
                 else {
-                     if (document.getElementById("autoscroll").checked == false) {
+                     if (document.getElementById("autoscroll").checked == false && manual == false) {
                         document.getElementById("autoscroll").checked = true;
                         document.getElementById("scrolllable").innerHTML = "AUTO";
                     }
